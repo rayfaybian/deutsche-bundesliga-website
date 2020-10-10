@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deutsche Bundesliga</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,900;1,900"
       rel="stylesheet"
@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script src="script.js" defer></script>
+    <script src="js/script.js" defer></script>
   </head>
 
   <body>
@@ -80,19 +80,19 @@
 </html>
 
 <script id="teams_template" type="text/x-handlebars-template">
-  <li id="team_button" onclick="getTeamInfo({{id}})">
-    <img src="{{crestUrl}}" />
-    <div class="textFrame">
+  <li id='team_button' onclick='getTeamInfo({{id}})'>
+    <img src='{{crestUrl}}' />
+    <div class='textFrame'>
       {{name}}
     </div>
   </li>
 </script>
 
 <script id="single_team_head_template" type="text/x-handlebars-template">
-  <div class="team_logo">
-    <img src="{{crestUrl}}" />
+  <div class='team_logo'>
+    <img src='{{crestUrl}}' />
   </div>
-  <div class="single_team_head">
+  <div class='single_team_head'>
     {{name}}
   </div>
 </script>
@@ -137,15 +137,12 @@
     <div class="player" id="player">
       <p class="player-name">{{ name }}</p>
       <p>Position: {{ position }}</p>
-      <p>
-        Geburtsdatum: {{ dateOfBirth }}
-      </p>
-      <p>Geburtsland: {{countryOfBirth}}</p>
-      <p>Nationalität: {{nationality}}</p>
-
+      <p>Geburtsdatum: {{ dateOfBirth }}</p>
+      <p>Geburtsland: {{ countryOfBirth }}</p>
+      <p>Nationalität: {{ nationality }}</p>
     </div>
-  </div>
+  </div>;
 </script>
 
-"countryOfBirth": "Germany", "nationality": "Germany",
-"shirtNumber": null, "role": "PLAYER"
+<!-- "countryOfBirth": "Germany", "nationality": "Germany", "shirtNumber": null,
+"role": "PLAYER" -->
