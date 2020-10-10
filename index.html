@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deutsche Bundesliga</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,900;1,900"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+      integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">
+          <img src="media/Bundesadler.png" alt="Bundesadler" />
+        </div>
+        <div class="title">DEUTSCHE BUNDESLIGA</div>
+        <div class="logo">
+          <img src="media/Bundesadler.png" alt="Bundesadler" />
+        </div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><button id="landingPage">Startseite</button></li>
+          <li><button id="seasons">Saisonen</button></li>
+          <li><button id="teams">Mannschaften</button></li>
+          <li><button id="gameTable">Aktuelle Tabelle</button></li>
+          <li><button id="info">Info</button></li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="display" id="display">
+          <div class="display_logo" id="display_logo"></div>
+          <div class="display_head" id="display_head"></div>
+          <div class="display_body"><ul id="table"></ul></div>
+        </div>
+      </div>
+      <div class="social_bar">
+        <ul>
+          <li>
+            <a href="https://twitter.com/Bundesliga_DE" target="blank"
+              ><i class="fab fa-twitter icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://deletefacebook.com/" target="blank"
+              ><i class="fab fa-facebook icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bundesliga_en/" target="blank"
+              ><i class="fab fa-instagram icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/user/bundesliga" target="blank"
+              ><i class="fab fa-youtube icon"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer">
+        by
+        <a href="https://www.fabiansuppan.at" target="blank">Fabian Suppan</a
+        ><br />2020
+      </div>
+    </div>
+  </body>
+</html>
+
+<script id="teams_template" type="text/x-handlebars-template">
+  <li id="team_button" onclick="getTeamInfo({{id}})">
+    <img src="{{crestUrl}}" />
+    <div class="textFrame">
+      {{name}}
+    </div>
+  </li>
+</script>
+
+<script id="single_team_head_template" type="text/x-handlebars-template">
+  <div class="team_logo">
+    <img src="{{crestUrl}}" />
+  </div>
+  <div class="single_team_head">
+    {{name}}
+  </div>
+</script>
+
+<script id="single_team_body_template" type="text/x-handlebars-template">
+  <div>
+    <div class="single_team_info">
+      <div>
+        Gründungsjahr: {{founded}}
+      </div>
+      <div>
+        Vereinsfarben: {{clubColors}}
+      </div>
+      <div>
+        Heimstadion: {{venue}}
+      </div>
+    </div>
+    <div class="single_team_contact_head">
+      Kontakt
+    </div>
+    <div class="single_team_contact">
+      <div>
+        Adresse: {{address}}
+      </div>
+      <div>
+        tel: {{phone}}
+      </div>
+      <div>
+        mail: {{email}}
+      </div>
+      <div>
+        homepage:
+        <a href="{{website}}" target="blank">
+          {{website}}
+        </a>
+      </div>
+    </div>
+</script>
+
+<script id="squad-table-template">
+  <div class="squad">
+    <div class="player" id="player">
+      <p class="player-name">{{ name }}</p>
+      <p>Position: {{ position }}</p>
+      <p>
+        Geburtsdatum: {{ dateOfBirth }}
+      </p>
+      <p>Geburtsland: {{countryOfBirth}}</p>
+      <p>Nationalität: {{nationality}}</p>
+
+    </div>
+  </div>
+</script>
+
+"countryOfBirth": "Germany", "nationality": "Germany",
+"shirtNumber": null, "role": "PLAYER"

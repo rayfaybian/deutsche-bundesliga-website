@@ -1,0 +1,328 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/*DEFAULT
+default settings for various elements*/
+a:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
+a:visited {
+  color: #ffbb00;
+}
+a{
+  color: #ffbb00;
+}
+
+/*HEADER
+head element containing the website title*/
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  background-color: #ffbb00;
+  position: sticky;
+  top: 0px;
+}
+.logo img {
+  height: 100px;
+}
+.title {
+  color: white;
+  text-align: center;
+  padding: 20px 60px;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+/*MENU
+menubar below header*/
+.menu {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  background-color: black;
+  top: 134px;
+}
+.menu ul {
+  justify-content: space-evenly;
+}
+.menu ul li {
+  padding: 0 10.5px;
+  display: inline;
+}
+.menu button {
+  width: 200px;
+  background-color: black;
+  color: white;
+  border: solid #ffbb00 3px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+.menu button:hover {
+  color: black;
+  background-color: #ffbb00;
+  cursor: pointer;
+}
+
+.menu button:focus {
+  outline: none;
+  color: black;
+  background-color: #ffbb00;
+}
+
+/*MAIN
+main area where content is displayed*/
+.main {
+  color: white;
+  background-color: none;
+}
+.main div {
+  max-width: 1100px;
+  margin: auto;
+}
+.display {
+  background-color: black;
+  padding: 20px;
+  border: solid #ffbb00 3px;
+  border-radius: 15px;
+  height: 450px;
+  overflow: auto;}
+
+  .display::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .display {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+/*STARTSEITE
+ when startseite is selected in menubar*/
+.landing_page .display_head {
+  color: #ffbb00;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-decoration-line: underline;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.landing_page .display_body {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.landing_page .landing_textbox {
+  font-size: 1.2rem;
+  line-height: 120%;
+  padding: 0 100px;
+}
+
+
+/*TEAMS
+when teams is selected in menubar*/
+.teams .display_head {
+  color: #ffbb00;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-decoration-line: underline;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.teams .display_body {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 25px;
+}
+.teams li {
+  padding: 6px 6px;
+  margin-bottom: 3px;
+  border: solid #ffbb00 3px;
+  border-radius: 10px;
+  line-height: 50px;
+  text-align: center;
+}
+.teams .textFrame {
+  font-size: 2rem;
+  padding-left: 20px;
+  vertical-align: middle;
+  display: inline;
+}
+.teams img {
+  display: inline;
+  vertical-align: middle;
+  border-radius: 50px;
+  background-color: white;
+  padding: 3px;
+  border: solid 3px #ffbb00;
+  height: 50px;
+}
+.teams li:hover {
+  cursor: pointer;
+  background-color: #ffbb00;
+  color: black;
+}
+/*SINGLE TEAM
+when a single team is displayed*/
+.single_team{
+  text-align: center;
+}
+.single_team .team_logo{
+  text-align: center;
+}
+.single_team .team_logo img {
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+  border: solid 3px #ffbb00;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.single_team_head{
+  color: #ffbb00;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+}
+.single_team_info div {
+  padding-bottom: 10px;
+}
+.single_team_contact_head{
+  padding: 10px 0;
+  color: #ffbb00;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+.single_team_contact div{
+  padding-bottom: 10px;
+}
+.squad{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.player{
+  background-color: greenyellow;
+  width: 15vw;
+  border: solid white;
+  margin-bottom: 20px;
+}
+
+
+.player p{
+  text-align: left;
+}
+
+.player-name{
+  
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+
+
+
+/*INFO
+when info is selected in menubar*/
+.info .display_head {
+  color: #ffbb00;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-decoration-line: underline;
+  padding: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.info .display_body {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.info .display_body img {
+  display: flex;
+  margin: auto;
+  border-radius: 15px;
+  height: 200px;
+}
+.info .text_box {
+  display: inline-block;
+  text-align: justify;
+  text-align: center;
+  padding-top: 25px;
+  line-height: 20px;
+}
+.info a:hover {
+  color: #ffbb00;
+  cursor: pointer;
+}
+
+/*SOCIAL BAR
+bar at bottom containing all social media links*/
+.social_bar {
+  color: #ffbb00;
+  display: flex;
+  font-weight: normal;
+  background-color: none;
+  color: white;
+  padding: 25px 0px;
+  padding-bottom: 25px;
+  justify-content: center;
+}
+.social_bar ul li {
+  display: inline;
+  font-size: 2rem;
+  padding: 0 20px;
+}
+.social_bar button:hover {
+  cursor: pointer;
+  color: #ffbb00;
+}
+.social_bar a:hover {
+  color: #ffbb00;
+}
+.social_bar .icon:hover {
+  -webkit-animation: spin 0.5s ease-out 0s 1 normal;
+  animation: spin 0.5s ease-out 0s 1 normal;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*FOOTER
+Information about site author*/
+.footer {
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 15px;
+  color: white;
+  font-size: 0.7rem;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #ffbb00;
+}
